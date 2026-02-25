@@ -1,0 +1,114 @@
+@media screen {
+    .a4-page {
+        background: white;
+        width: 210mm;
+        height: 297mm;
+        margin: 10mm auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        padding: 0mm;
+    }
+}
+
+@media print {
+    .a4-page {
+        background: white;
+        width: 210mm;
+        height: 297mm;
+        margin: 0mm auto;
+    }
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    background: #333;
+    color: white;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.job-title {
+    font-size: 1.2rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-icon {
+    width: 18px;
+    margin-right: 15px;
+}
+
+.main {
+    display: flex;
+}
+
+.sidebar {
+    background: #eee7e1;
+    min-width: 150px;
+    width: 30%;
+    padding-right: 10px;
+}
+
+.font {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+}
+
+.sidebar-header {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+
+.sidebar-content {
+    font-size: 0.75rem;
+    margin-left: 10px;
+}
+
+.sidebar-list {
+    font-size: 0.75rem;
+    margin-left: -10px;
+}
+
+.details {
+    background: white;
+    margin: 20px 10px 20px 20px
+}
+
+.detail-header {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.detail-content {
+    margin-bottom: 20px;
+}
+
+.exp-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.exp-subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
