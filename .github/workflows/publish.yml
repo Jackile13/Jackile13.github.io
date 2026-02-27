@@ -20,8 +20,8 @@ jobs:
       - name: Prepare files
         run: |
           mkdir artifacts
-          cp resume.html artifacts/
-          cp resume.css artifacts/
+          cp resume.html artifacts/index.html
+          cp resume.css artifacts/style.css
           
         # Upload resume.html and resume.css
       - name: Upload files
