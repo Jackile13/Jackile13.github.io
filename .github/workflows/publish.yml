@@ -32,6 +32,10 @@ jobs:
           mkdir artifacts
           cp resume.html artifacts/index.html
           cp resume.css artifacts/style.css
+          cp -r resources artifacts/resources
+          
+          cd artifacts
+          sed -i 's/resume.css/style.css/g' index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
