@@ -1,15 +1,21 @@
-name: Publish resume
+name: Publish resume to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+
   workflow_dispatch:
 
+# Allows changes published by token to write to pages
 permissions:
+  contents: read
   pages: write
   id-token: write
-  contents: read
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -27,11 +33,14 @@ jobs:
           cp resume.html artifacts/index.html
           cp resume.css artifacts/style.css
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './artifacts'
+          path: 'artifacts'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
