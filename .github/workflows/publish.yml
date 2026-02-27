@@ -57,8 +57,8 @@ jobs:
       - name: Export resume.html to pdf
         uses: fifsky/html-to-pdf-action@master
         with:
-          htmlFile: resume.html
-          outputFile: resume.pdf
+          htmlFile: ./resume.html
+          outputFile: ./resume.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "0mm", "left": "0mm", "right": "0mm", "bottom": "0mm"}}'
       
       - name: Upload PDF
@@ -66,4 +66,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: 'resume.pdf'
+          name: 'Resume.pdf'
 
