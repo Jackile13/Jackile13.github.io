@@ -55,10 +55,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Export resume.html to pdf
-        uses: narthanaj/html-to-pdf-action@v1
+        uses: markwilson/html2pdf@v1.0
         with:
-          source: "./resume.html"
-          output: "./resume.pdf"
+          htmlPath: 'resume.html'
+          pdfName: 'resume'
 
       - name: Upload PDF
         id: upload
