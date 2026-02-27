@@ -55,12 +55,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Export resume.html to pdf
-        uses: fifsky/html-to-pdf-action@master
+        uses: ferdinandkeller/html-to-pdf-action@v2
         with:
-          htmlFile: ./resume.html
-          outputFile: ./resume.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "0mm", "left": "0mm", "right": "0mm", "bottom": "0mm"}}'
-      
+          source-path: "./resume.html"
+          destination-path: "./resume.pdf"
+
       - name: Upload PDF
         id: upload
         uses: actions/upload-artifact@v4
