@@ -27,6 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Move and modify files ready for GitHub Pages
       - name: Prepare files
         run: |
           mkdir artifacts
@@ -40,6 +41,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Upload everything from artifacts folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -48,3 +50,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Export resume.html to pdf
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: resume.html
+          outputFile: resume.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "0mm", "left": "0mm", "right": "0mm", "bottom": "0mm"}}'
+      
+      - name: Upload PDF
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          path: 'resume.pdf'
+
