@@ -1,6 +1,6 @@
 @media screen {
     .a4-page {
-        background: white;
+        background: #b4d4fd;
         width: 210mm;
         height: 297mm;
         margin: 10mm auto;
@@ -25,6 +25,11 @@
     background: #333;
     color: white;
     justify-content: space-between;
+}
+
+.footer {
+    height: 30px;
+    background-color: #333;
 }
 
 .name {
@@ -54,6 +59,7 @@
 
 .main {
     display: flex;
+    background-color: white;
 }
 
 .sidebar {
@@ -85,7 +91,8 @@
 
 .details {
     background: white;
-    margin: 20px 10px 20px 20px
+    margin: 20px 10px 20px 20px;
+    font-size: 0.89rem;
 }
 
 .detail-header {
