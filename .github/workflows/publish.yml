@@ -51,19 +51,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
   
-  export:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Export resume.html to pdf
-        uses: markwilson/html2pdf@v1.0
-        with:
-          htmlPath: 'resume.html'
-          pdfName: 'resume'
-
-      - name: Upload PDF
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          path: 'resume.pdf'
-          name: 'Resume.pdf'
 
