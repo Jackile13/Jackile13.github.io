@@ -28,16 +28,16 @@
 }
 
 .footer {
-    height: 25px;
+    height: 5px;
     background-color: #333;
 }
 
 .name {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .job-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .contact {
@@ -50,11 +50,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    font-size: 0.8rem;
 }
 
 .contact-icon {
-    width: 18px;
-    margin-right: 15px;
+    width: 14px;
+    margin-right: 10px;
 }
 
 .main {
@@ -65,7 +66,7 @@
 .sidebar {
     background: #eee7e1;
     min-width: 150px;
-    width: 30%;
+    width: 35%;
     padding-right: 10px;
 }
 
@@ -92,8 +93,8 @@
 
 .details {
     background: white;
-    margin: 20px 10px 20px 20px;
-    font-size: 0.89rem;
+    margin: 10px 20px 0px 20px;
+    font-size: 0.88rem;
 }
 
 .detail-header {
